@@ -1,5 +1,5 @@
 import React from 'react';
-import {Formulario} from './elementos/Formularios.js';
+import {Formulario, Label} from './elementos/Formularios.js';
 
 const App = () => {
   return (
@@ -7,7 +7,7 @@ const App = () => {
             <Formulario action="">
               <div>
             
-                  <label htmlFor="">Usuario</label>
+                  <Label htmlFor="">Usuario</Label>
                   <input type="text" placeholder="usuario"/>
               </div>
           </Formulario>

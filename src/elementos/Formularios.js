@@ -11,4 +11,13 @@ const Formulario = styled.form`
 	}
 `;
 
-export {Formulario};
+const Label = styled.label` 
+	display: block;
+	font-weigth:700;
+	padding: 10px;
+	min-heigth: 40px;
+	cursor: pointer;
+
+`;
+
+export {Formulario, Label};
