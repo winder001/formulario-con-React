@@ -1,7 +1,10 @@
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const colores = {
-	border: "#0075ff"
+	border: "#0075ff",
+	error: "#bb2929"
 }
 
 
@@ -32,11 +35,11 @@ const GrupoInput = styled.div`
 const Input = styled.input`
 	width: 100%;
 	background: #fff;
-	border-radius: 4px;
+	border-radius: 3px;
 	height: 45px;
 	line-height: 45px;
 	padding: 0 40px 0 10px;
-	transition: .3 solid transparent;
+	transition: .3s ease all;
 	border: 3px solid transparent;
 
 	&:focus {
@@ -47,4 +50,22 @@ const Input = styled.input`
 	
 `;
 
-export {Formulario, Label, GrupoInput, Input, colores}
+const LeyendaError = styled.p ` 
+	font-size: 12px;
+	margin-bottom: 0;
+	color: ${colores.error};
+	/*display: none;*/
+`;
+
+const IconoValidacion = styled(FontAwesomeIcon)` 
+	position: absolute;
+	right: 10px;
+	bottom: 14px;
+	z-index: 100;
+	font-size: 16px;
+	/*opacity: 0;*/
+`;
+
+
+
+export {Formulario, Label, GrupoInput, Input, LeyendaError, IconoValidacion};
