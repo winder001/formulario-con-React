@@ -1,21 +1,14 @@
 import React from 'react';
-import {Formulario, Label, GrupoInput, Input, LeyendaError, IconoValidacion, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError} from './elementos/Formularios.js';
+import {Formulario, Label, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError} from './elementos/Formularios.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import {faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
+import Input from './componentes/input';
 
 const App = () => {
   return (
         <main>
             <Formulario action=" nombre">
-              <div>
-                   <Label htmlFor="">Usuario</Label>
-                  <GrupoInput>
-                      <Input type="text" placeholder="usuario" id="nombre"/>
-                      <IconoValidacion icon={faCheckCircle}/>
-                  </GrupoInput>
-
-                  <LeyendaError>la leyenda error del input </LeyendaError>
-              </div>
+             <Input/>
 
 
               <ContenedorTerminos>
