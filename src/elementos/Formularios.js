@@ -105,6 +105,22 @@ const MensajeExito = styled.p`
 
 `;
 
+const MensajeError = styled.div ` 
+	height: 45px;
+	line-height: 45px;
+	background: #f66060;
+	padding: 0px 15px;
+	border-radius: 3px;
+	grid-column: span 2;
+
+	p {
+		margin: 0;
+	}
+
+	b {
+		margin-left: 10px;
+	}
+`;
 
 
 
@@ -117,5 +133,6 @@ export {Formulario,
 		ContenedorTerminos,
 		ContenedorBotonCentrado,
 		Boton,
-		MensajeExito 
+		MensajeExito,
+		MensajeError 
 		};
