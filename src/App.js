@@ -1,5 +1,5 @@
 import React from 'react';
-import {Formulario, Label, GrupoInput, Input, LeyendaError, IconoValidacion} from './elementos/Formularios.js';
+import {Formulario, Label, GrupoInput, Input, LeyendaError, IconoValidacion, ContenedorTerminos, ContenedorBotonCentrado,Boton} from './elementos/Formularios.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
@@ -17,12 +17,13 @@ const App = () => {
                   <LeyendaError>la leyenda error del input </LeyendaError>
               </div>
 
-              <div>
+
+              <ContenedorTerminos>
                   <Label>
                       <input type="checkbox" name="terminos" id="terminos"/>
                         Acepto los Terminos y Condiciones
                   </Label>
-              </div>
+              </ContenedorTerminos>
 
               <div>
                   <p>
@@ -31,10 +32,10 @@ const App = () => {
                   </p> 
               </div>
 
-              <div> 
-                  <button type="submit"> Enviar </button>
+              <ContenedorBotonCentrado> 
+                  <Boton type="submit"> Enviar </Boton>
                   <p>Formulario se envio Exitosamente!</p>
-              </div>
+              </ContenedorBotonCentrado>
 
 
           </Formulario>

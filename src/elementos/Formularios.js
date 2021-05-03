@@ -66,6 +66,48 @@ const IconoValidacion = styled(FontAwesomeIcon)`
 	/*opacity: 0;*/
 `;
 
+const ContenedorTerminos = styled.div ` 
+	grid-column: span 2;
+
+	input {
+		margin-right: 10px;
+	}
+`;
+
+const ContenedorBotonCentrado = styled.div` 
+	display : flex;
+	justify-content: column;
+	aling-items: center;
+	grid-column: span 2;
+`;
+
+const Boton = styled.button` 
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+
+	&:hover {
+		box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+	}
+`;
 
 
-export {Formulario, Label, GrupoInput, Input, LeyendaError, IconoValidacion};
+
+
+export {Formulario, 
+		Label, 
+		GrupoInput, 
+		Input, 
+		LeyendaError, 
+		IconoValidacion, 
+		ContenedorTerminos,
+		ContenedorBotonCentrado,
+		Boton 
+		};
