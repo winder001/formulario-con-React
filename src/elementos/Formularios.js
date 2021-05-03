@@ -76,8 +76,8 @@ const ContenedorTerminos = styled.div `
 
 const ContenedorBotonCentrado = styled.div` 
 	display : flex;
-	justify-content: column;
-	aling-items: center;
+	flex-direction: column;
+	align-items: center;
 	grid-column: span 2;
 `;
 
