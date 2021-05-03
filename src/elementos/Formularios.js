@@ -103,8 +103,6 @@ const MensajeExito = styled.p`
 		font-size: 14px;
 		color: ${colores.exito};
 		display: none;
-
-
 `;
 
 const MensajeError = styled.div ` 
@@ -123,8 +121,6 @@ const MensajeError = styled.div `
 		margin-left: 10px;
 	}
 `;
-
-
 
 export {Formulario, 
 		Label, 

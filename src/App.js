@@ -8,8 +8,12 @@ const App = () => {
   return (
         <main>
             <Formulario action=" nombre">
-             <Input/>
+             <Input
+                tipo="text"
+                label="usuario"
+                placeholder="juan123"
 
+             />
 
               <ContenedorTerminos>
                   <Label>
