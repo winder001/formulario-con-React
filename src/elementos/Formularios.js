@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const colores = {
 	border: "#0075ff",
-	error: "#bb2929"
+	error: "#bb2929",
+	exito: "#1ed12d"
 }
 
 
@@ -98,6 +99,12 @@ const Boton = styled.button`
 	}
 `;
 
+const MensajeExito = styled.p` 
+		font-size: 14px;
+		color: ${colores.exito};
+
+`;
+
 
 
 
@@ -109,5 +116,6 @@ export {Formulario,
 		IconoValidacion, 
 		ContenedorTerminos,
 		ContenedorBotonCentrado,
-		Boton 
+		Boton,
+		MensajeExito 
 		};

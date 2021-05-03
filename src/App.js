@@ -1,5 +1,5 @@
 import React from 'react';
-import {Formulario, Label, GrupoInput, Input, LeyendaError, IconoValidacion, ContenedorTerminos, ContenedorBotonCentrado,Boton} from './elementos/Formularios.js';
+import {Formulario, Label, GrupoInput, Input, LeyendaError, IconoValidacion, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito} from './elementos/Formularios.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
@@ -34,7 +34,7 @@ const App = () => {
 
               <ContenedorBotonCentrado> 
                   <Boton type="submit"> Enviar </Boton>
-                  <p>Formulario se envio Exitosamente!</p>
+                  <MensajeExito>Formulario se envio Exitosamente!</MensajeExito>
               </ContenedorBotonCentrado>
 
 
