@@ -30,6 +30,13 @@ const App = () => {
                     <b> Error: </b> Por favor rellene el formulario correctamente.
                   </p> 
               </div>
+
+              <div> 
+                  <button type="submit"> Enviar </button>
+                  <p>Formulario se envio Exitosamente!</p>
+              </div>
+
+
           </Formulario>
         </main>
     );
