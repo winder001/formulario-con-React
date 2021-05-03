@@ -55,7 +55,7 @@ const LeyendaError = styled.p `
 	font-size: 12px;
 	margin-bottom: 0;
 	color: ${colores.error};
-	/*display: none;*/
+	display: none;
 `;
 
 const IconoValidacion = styled(FontAwesomeIcon)` 
@@ -64,7 +64,7 @@ const IconoValidacion = styled(FontAwesomeIcon)`
 	bottom: 14px;
 	z-index: 100;
 	font-size: 16px;
-	/*opacity: 0;*/
+	opacity: 0;
 `;
 
 const ContenedorTerminos = styled.div ` 
@@ -102,6 +102,8 @@ const Boton = styled.button`
 const MensajeExito = styled.p` 
 		font-size: 14px;
 		color: ${colores.exito};
+		display: none;
+
 
 `;
 
