@@ -6,13 +6,13 @@ import {faCheckCircle} from '@fortawesome/free-solid-svg-icons';
 const ComponenteInput = ({ tipo, label, placeholder, name, leyendaError}) => {
 	return (
         <div>
-	        <Label htmlFor="">{label}</Label>
+	        <Label htmlFor={name}>{label}</Label>
 	            <GrupoInput>
-	                <Input type="text" placeholder={placeholder} id="nombre"/>
+	                <Input type={tipo} placeholder={placeholder} id={name}/>
 	                <IconoValidacion icon={faCheckCircle}/>
 	            </GrupoInput>
 
-	              <LeyendaError>la leyenda error del input </LeyendaError>
+	              <LeyendaError>{leyendaError}</LeyendaError>
 	    </div>
 		);
 }
