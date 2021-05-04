@@ -22,7 +22,7 @@ const App = () => {
                 label="usuario"
                 placeholder="juan123"
                 name="usuario"
-                leyendaError=" el usuario tiene que ser de 4 a 16 digitos y solo puede contener letras, numero, guion y guion bajo. "
+                leyendaError=" el usuario tiene que ser de 4 a 20 digitos y solo puede contener letras, numero, guion y guion bajo. "
                 expresionRegular={expresiones.usuario}
              />
 

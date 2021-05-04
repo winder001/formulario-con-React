@@ -1,6 +1,6 @@
 import React from 'react';
 import {Input, Label, GrupoInput, LeyendaError, IconoValidacion} from './../elementos/Formularios';
-import {faCheckCircle} from '@fortawesome/free-solid-svg-icons';
+import {faCheckCircle, faTimesCircle} from '@fortawesome/free-solid-svg-icons';
 
 
 const ComponenteInput = ({estado, cambiarEstado, tipo, label, placeholder, name, leyendaError, expresionRegular}) => {
@@ -35,7 +35,11 @@ const ComponenteInput = ({estado, cambiarEstado, tipo, label, placeholder, name,
 	                	onBlur={validacion}
 	                	valido={estado.valido}
 	                	/>
-	                <IconoValidacion icon={faCheckCircle}/>
+	                <IconoValidacion 
+	                	icon={estado.valido === 'true' ? faCheckCircle : faTimesCircle}
+	                	valido={estado.valido}
+
+	                />
 	            </GrupoInput>
 
 	              <LeyendaError valido={estado.valido}>{leyendaError}</LeyendaError>
