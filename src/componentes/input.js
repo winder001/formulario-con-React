@@ -38,7 +38,7 @@ const ComponenteInput = ({estado, cambiarEstado, tipo, label, placeholder, name,
 	                <IconoValidacion icon={faCheckCircle}/>
 	            </GrupoInput>
 
-	              <LeyendaError>{leyendaError}</LeyendaError>
+	              <LeyendaError valido={estado.valido}>{leyendaError}</LeyendaError>
 	    </div>
 		);
 }

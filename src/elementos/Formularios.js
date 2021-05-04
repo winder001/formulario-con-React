@@ -68,6 +68,14 @@ const LeyendaError = styled.p `
 	margin-bottom: 0;
 	color: ${colores.error};
 	display: none;
+
+	${props => props.valido === 'true' && css` 
+		display:none;
+	`}
+
+	${props => props.valido === 'false' && css` 
+		display:block;
+	`}
 `;
 
 const IconoValidacion = styled(FontAwesomeIcon)` 
