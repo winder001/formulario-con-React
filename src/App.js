@@ -1,20 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Formulario, Label, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError} from './elementos/Formularios.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
 import Input from './componentes/input';
 
 const App = () => {
+
+    const [usuario, cambiarUsuario] = useState({campo: '', valido: null});
+
+    const expresiones = {
+        usuario: /^[a-zA-Z0-9\_\-]{4,20}$/ //letras, numeros, guion y guion bajos.
+    }
+
   return (
         <main>
-            <Formulario action=" nombre">
+            <Formulario action="">
              <Input
+                estado= {usuario}
+                cambiarEstado={cambiarUsuario}
                 tipo="text"
                 label="usuario"
                 placeholder="juan123"
                 name="usuario"
                 leyendaError=" el usuario tiene que ser de 4 a 16 digitos y solo puede contener letras,numero, guion y guion bajo "
-
+                expresionRegular={expresiones.usuario}
              />
 
               <ContenedorTerminos>
