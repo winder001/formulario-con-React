@@ -6,12 +6,14 @@ import Input from './componentes/input';
 
 const App = () => {
 
-    const [usuario, cambiarUsuario] = useState({campo: '', valido: null});
-    const [nombre, cambiarNombre]   = useState({campo: '', valido: null});
+    const [usuario, cambiarUsuario]   = useState({campo: '', valido: null});
+    const [nombre, cambiarNombre]     = useState({campo: '', valido: null});
+    const [password, cambiarPassword] = useState({campo: '', valido: null});
 
     const expresiones = {
         usuario: /^[a-zA-Z0-9\_\-]{4,20}$/, //letras, numeros, guion y guion bajos.
-        nombre: /^[a-zA-zÁ-ÿ\s]{1,40}/, //letras y espacios pueden llevar acentos
+        nombre: /^[a-zA-zÁ-ÿ\s]{1,40}$/, //letras y espacios pueden llevar acentos
+        password: /^.{4,20}$/ //4 a 12 digitos
     }
 
   return (
@@ -37,6 +39,16 @@ const App = () => {
                 name="usuario"
                 leyendaError=" el nombre solo puede contener letras y espacio."
                 expresionRegular={expresiones.nombre}
+             />
+
+             <Input
+                estado= {password}
+                cambiarEstado={cambiarPassword}
+                tipo="password"
+                label="Contraseña"
+                name="password1"
+                leyendaError=" La Contrasseña tiene que de 4 a 20 digitos"
+                expresionRegular={expresiones.password}
              />
 
               <ContenedorTerminos>
