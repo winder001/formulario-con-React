@@ -7,9 +7,11 @@ import Input from './componentes/input';
 const App = () => {
 
     const [usuario, cambiarUsuario] = useState({campo: '', valido: null});
+    const [nombre, cambiarNombre]   = useState({campo: '', valido: null});
 
     const expresiones = {
-        usuario: /^[a-zA-Z0-9\_\-]{4,20}$/ //letras, numeros, guion y guion bajos.
+        usuario: /^[a-zA-Z0-9\_\-]{4,20}$/, //letras, numeros, guion y guion bajos.
+        nombre: /^[a-zA-zÁ-ÿ\s]{4,40}/, //letras y espacios pueden llevar acentos
     }
 
   return (
@@ -19,11 +21,22 @@ const App = () => {
                 estado= {usuario}
                 cambiarEstado={cambiarUsuario}
                 tipo="text"
-                label="usuario"
+                label="Usuario"
                 placeholder="juan123"
                 name="usuario"
                 leyendaError=" el usuario tiene que ser de 4 a 20 digitos y solo puede contener letras, numero, guion y guion bajo. "
                 expresionRegular={expresiones.usuario}
+             />
+
+             <Input
+                estado= {nombre}
+                cambiarEstado={cambiarNombre}
+                tipo="text"
+                label="Nombre"
+                placeholder="juan carlos"
+                name="usuario"
+                leyendaError=" el nombre solo puede contener letras y espacios, y minomo 4 letras en adelante"
+                expresionRegular={expresiones.nombre}
              />
 
               <ContenedorTerminos>
