@@ -11,7 +11,7 @@ const App = () => {
 
     const expresiones = {
         usuario: /^[a-zA-Z0-9\_\-]{4,20}$/, //letras, numeros, guion y guion bajos.
-        nombre: /^[a-zA-zÁ-ÿ\s]{4,40}/, //letras y espacios pueden llevar acentos
+        nombre: /^[a-zA-zÁ-ÿ\s]{1,40}/, //letras y espacios pueden llevar acentos
     }
 
   return (
@@ -35,7 +35,7 @@ const App = () => {
                 label="Nombre"
                 placeholder="juan carlos"
                 name="usuario"
-                leyendaError=" el nombre solo puede contener letras y espacios, y minomo 4 letras en adelante"
+                leyendaError=" el nombre solo puede contener letras y espacio."
                 expresionRegular={expresiones.nombre}
              />
 
