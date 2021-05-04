@@ -10,11 +10,13 @@ const App = () => {
     const [nombre, cambiarNombre] = useState({campo: '', valido: null});
     const [password, cambiarPassword] = useState({campo: '', valido: null});
     const [password2, cambiarPassword2] = useState({campo: '', valido: null});
+    const [correo, cambiarCorreo] = useState({campo: '', valido: null});
 
     const expresiones = {
         usuario: /^[a-zA-Z0-9\_\-]{4,20}$/, //letras, numeros, guion y guion bajos.
         nombre: /^[a-zA-zÁ-ÿ\s]{1,40}$/, //letras y espacios pueden llevar acentos
-        password: /^.{4,20}$/ //4 a 12 digitos
+        password: /^.{4,20}$/, //4 a 12 digitos
+        correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
     }
 
   return (
@@ -59,6 +61,17 @@ const App = () => {
                 label="Repetir Contraseña"
                 name="password2"
                 leyendaError="Ambas contraseñas deben ser iguales"
+             />
+
+             <Input
+                estado= {correo}
+                cambiarEstado={cambiarCorreo}
+                tipo="email"
+                label="Correo Electronoco"
+                placeholder="correo@correo.com"
+                name="correp"
+                leyendaError="El correo solo debe contener letras, numeros,punto,guion y guion bajo."
+                expresionRegular={expresiones.correo}
              />
 
               <ContenedorTerminos>
