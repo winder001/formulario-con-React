@@ -3,7 +3,7 @@ import {Input, Label, GrupoInput, LeyendaError, IconoValidacion} from './../elem
 import {faCheckCircle} from '@fortawesome/free-solid-svg-icons';
 
 
-const ComponenteInput = ({label, placeholder}) => {
+const ComponenteInput = ({ tipo, label, placeholder, name, leyendaError}) => {
 	return (
         <div>
 	        <Label htmlFor="">{label}</Label>
