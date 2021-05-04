@@ -11,12 +11,14 @@ const App = () => {
     const [password, cambiarPassword] = useState({campo: '', valido: null});
     const [password2, cambiarPassword2] = useState({campo: '', valido: null});
     const [correo, cambiarCorreo] = useState({campo: '', valido: null});
+    const [telefono, cambiarTelefono] = useState({campo: '', valido: null});
 
     const expresiones = {
         usuario: /^[a-zA-Z0-9\_\-]{4,20}$/, //letras, numeros, guion y guion bajos.
         nombre: /^[a-zA-zÁ-ÿ\s]{1,40}$/, //letras y espacios pueden llevar acentos
         password: /^.{4,20}$/, //4 a 12 digitos
-        correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+        correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+        telefono: /^\d{7,14}$/ // 7 a 14 numeros.
     }
 
   return (
@@ -69,9 +71,20 @@ const App = () => {
                 tipo="email"
                 label="Correo Electronoco"
                 placeholder="correo@correo.com"
-                name="correp"
+                name="correo"
                 leyendaError="El correo solo debe contener letras, numeros,punto,guion y guion bajo."
                 expresionRegular={expresiones.correo}
+             />
+
+             <Input
+                estado= {telefono}
+                cambiarEstado={cambiarTelefono}
+                tipo="text"
+                label="Telefono"
+                placeholder="2234543436"
+                name="telefono"
+                leyendaError="El telefono solo debe contener numeros y maximo 14 digitos."
+                expresionRegular={expresiones.telefono}
              />
 
               <ContenedorTerminos>
