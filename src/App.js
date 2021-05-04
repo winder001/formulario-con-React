@@ -6,9 +6,10 @@ import Input from './componentes/input';
 
 const App = () => {
 
-    const [usuario, cambiarUsuario]   = useState({campo: '', valido: null});
-    const [nombre, cambiarNombre]     = useState({campo: '', valido: null});
+    const [usuario, cambiarUsuario] = useState({campo: '', valido: null});
+    const [nombre, cambiarNombre] = useState({campo: '', valido: null});
     const [password, cambiarPassword] = useState({campo: '', valido: null});
+    const [password2, cambiarPassword2] = useState({campo: '', valido: null});
 
     const expresiones = {
         usuario: /^[a-zA-Z0-9\_\-]{4,20}$/, //letras, numeros, guion y guion bajos.
@@ -49,6 +50,15 @@ const App = () => {
                 name="password1"
                 leyendaError=" La Contrasseña tiene que de 4 a 20 digitos"
                 expresionRegular={expresiones.password}
+             />
+
+             <Input
+                estado= {password2}
+                cambiarEstado={cambiarPassword2}
+                tipo="password"
+                label="Repetir Contraseña"
+                name="password2"
+                leyendaError="Ambas contraseñas deben ser iguales"
              />
 
               <ContenedorTerminos>
