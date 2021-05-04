@@ -26,6 +26,10 @@ const Label = styled.label`
 	min-heigth: 40px;
 	cursor: pointer;
 
+	${props => props.valido === 'false' && css` 
+		color: ${colores.error}
+	`}
+
 `;
 
 const GrupoInput = styled.div` 

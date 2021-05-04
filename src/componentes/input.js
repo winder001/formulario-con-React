@@ -23,7 +23,7 @@ const ComponenteInput = ({estado, cambiarEstado, tipo, label, placeholder, name,
 
 	return (
         <div>
-	        <Label htmlFor={name}>{label}</Label>
+	        <Label htmlFor={name} valido={estado.valido}>{label}</Label>
 	            <GrupoInput>
 	                <Input 
 	                	type={tipo} 
