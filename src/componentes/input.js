@@ -12,9 +12,9 @@ const ComponenteInput = ({estado, cambiarEstado, tipo, label, placeholder, name,
 	const validacion = () => {
 		if(expresionRegular){
 			if(expresionRegular.test(estado.campo)){
-				console.log('Input correcto');
+				cambiarEstado({...estado, valido: 'true'});
 			} else {
-				console.log('Input incorrecto');
+				cambiarEstado({...estado, valido: 'false'});
 
 			}
 		}
@@ -33,6 +33,7 @@ const ComponenteInput = ({estado, cambiarEstado, tipo, label, placeholder, name,
 	                	onChange={onChange}
 	                	onKeyUp={validacion}
 	                	onBlur={validacion}
+	                	valido={estado.valido}
 	                	/>
 	                <IconoValidacion icon={faCheckCircle}/>
 	            </GrupoInput>

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -40,7 +40,7 @@ const Input = styled.input`
 	height: 45px;
 	line-height: 45px;
 	padding: 0 40px 0 10px;
-	transition: .3s ease all;
+	transition: .2s ease all;
 	border: 3px solid transparent;
 
 	&:focus {
@@ -48,6 +48,14 @@ const Input = styled.input`
 		outline: none;
 		box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
 	}
+
+	${props => props.valido === 'true' && css` 
+		border: 3px solid transparent;
+	`}
+
+	${props => props.valido === 'false' && css` 
+		border: 3px solid ${colores.error} !important;
+	`}
 	
 `;
 
