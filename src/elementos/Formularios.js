@@ -103,6 +103,10 @@ const ContenedorTerminos = styled.div `
 	input {
 		margin-right: 10px;
 	}
+
+	@media (max-width: 800px){
+		grid-column: span 1;
+	}
 `;
 
 const ContenedorBotonCentrado = styled.div` 
@@ -110,6 +114,10 @@ const ContenedorBotonCentrado = styled.div`
 	flex-direction: column;
 	align-items: center;
 	grid-column: span 2;
+
+	@media (max-width: 800px){
+		grid-column: span 1;
+	}
 `;
 
 const Boton = styled.button` 
@@ -148,6 +156,10 @@ const MensajeError = styled.div `
 
 	b {
 		margin-left: 10px;
+	}
+
+	@media (max-width: 800px){
+		grid-column: span 1;
 	}
 `;
 
