@@ -13,6 +13,7 @@ const App = () => {
     const [correo, cambiarCorreo] = useState({campo: '', valido: null});
     const [telefono, cambiarTelefono] = useState({campo: '', valido: null});
     const [terminos, cambiarTerminos] = useState(false);
+    const [formularioValido, cambiarFormularioValido] = useState(null)
 
 
     const expresiones = {
@@ -41,9 +42,33 @@ const App = () => {
         cambiarTerminos(e.target.checked);
     }
 
+    const onSubmit = (e) => {
+        e.preventDefault();
+
+        if(
+          usuario.valido === 'true' && 
+          nombre.valido === 'true' &&
+          password.valido === 'true' &&
+          password2.valido === 'true' &&
+          correo.valido === 'true' &&
+          telefono.valido === 'true' &&
+          terminos
+          ){
+              cambiarFormularioValido(true);
+              cambiarUsuario({campo: '', valido:null});
+              cambiarNombre({campo: '', valido:null});
+              cambiarPassword({campo: '', valido:null});
+              cambiarPassword2({campo: '', valido:null});
+              cambiarCorreo({campo: '', valido:null});
+              cambiarTelefono({campo: '', valido:null});
+        } else {
+            cambiarFormularioValido(false)
+        }
+    }
+
   return (
         <main>
-            <Formulario action="">
+            <Formulario action="" onSubmit={onSubmit}>
              <Input
                 estado= {usuario}
                 cambiarEstado={cambiarUsuario}
