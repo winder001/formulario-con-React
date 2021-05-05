@@ -12,6 +12,8 @@ const App = () => {
     const [password2, cambiarPassword2] = useState({campo: '', valido: null});
     const [correo, cambiarCorreo] = useState({campo: '', valido: null});
     const [telefono, cambiarTelefono] = useState({campo: '', valido: null});
+    const [terminos, cambiarTerminos] = useState(false);
+
 
     const expresiones = {
         usuario: /^[a-zA-Z0-9\_\-]{4,20}$/, //letras, numeros, guion y guion bajos.
@@ -33,6 +35,10 @@ const App = () => {
             });
         }
       }
+    }
+
+    const onChangeTerminos = (e) => {
+        cambiarTerminos(e.target.checked);
     }
 
   return (
@@ -104,8 +110,13 @@ const App = () => {
 
               <ContenedorTerminos>
                   <Label>
-                      <input type="checkbox" name="terminos" id="terminos"/>
-                        Acepto los Terminos y Condiciones
+                      <input 
+                        type="checkbox" 
+                        name="terminos" 
+                        id="terminos" 
+                        checked={terminos}
+                        onChange= {onChangeTerminos}/>
+                      Acepto los Terminos y Condiciones
                   </Label>
               </ContenedorTerminos>
 
