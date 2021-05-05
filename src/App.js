@@ -145,7 +145,7 @@ const App = () => {
                   </Label>
               </ContenedorTerminos>
 
-             {false && <MensajeError>
+             {formularioValido === false && <MensajeError>
                   <p>
                     <FontAwesomeIcon icon= {faExclamationTriangle}/>
                     <b> Error: </b> Por favor rellene el formulario correctamente.
