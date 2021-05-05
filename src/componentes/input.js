@@ -3,7 +3,7 @@ import {Input, Label, GrupoInput, LeyendaError, IconoValidacion} from './../elem
 import {faCheckCircle, faTimesCircle} from '@fortawesome/free-solid-svg-icons';
 
 
-const ComponenteInput = ({estado, cambiarEstado, tipo, label, placeholder, name, leyendaError, expresionRegular}) => {
+const ComponenteInput = ({estado, cambiarEstado, tipo, label, placeholder, name, leyendaError, expresionRegular, funcion}) => {
 	
 	const onChange = (e) => {
 			cambiarEstado({...estado, campo: e.target.value})
@@ -17,6 +17,10 @@ const ComponenteInput = ({estado, cambiarEstado, tipo, label, placeholder, name,
 				cambiarEstado({...estado, valido: 'false'});
 
 			}
+		}
+
+		if (funcion){
+				funcion();
 		}
 
 	}
